@@ -1,0 +1,138 @@
+@font-face {
+  font-family: Roboto;
+  src: url("./fonts/Roboto-Regular.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #e1eff0;
+  font-family: Roboto;
+}
+
+.main-wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20px;
+  padding-left: 50px;
+}
+
+.bg-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.menu-btn {
+  position: relative;
+  width: 190px;
+  color: white;
+  font-size: 0.7em;
+}
+
+.dropdown-trigger,
+li {
+  height: 40px;
+}
+
+.dropdown-trigger {
+  background: linear-gradient(180deg, rgba(68, 68, 68, 0.76) 15%, #313338 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.28);
+}
+
+.dropdown-wrapper {
+  height: 175px;
+  width: 100%;
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: stretch;
+  filter: drop-shadow(4px 6px 8px rgba(0, 0, 0, 0.33));
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+li {
+  background: linear-gradient(180deg, rgba(68, 68, 68, 0.76) 0%, #3b3b3b 100%);
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+li:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+li:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+.dropdown-trigger,
+li {
+  padding-left: 20px;
+}
+
+span {
+  padding-left: 10px;
+}
+
+.material-icons.sizing {
+  font-size: 18px;
+}
+
+ul {
+  position: relative;
+}
+
+ul::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 20%;
+  border-top: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #5e6161;
+  z-index: 1;
+}
+
+.menu-btn:hover .dropdown-trigger {
+  color: #76e706;
+  cursor: pointer;
+}
+
+em,
+span {
+  transition: 0.5s ease-in-out;
+}
+
+.menu-btn:hover .dropdown-wrapper {
+  top: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+
+li:hover {
+  color: #76e706;
+  cursor: pointer;
+}
