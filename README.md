@@ -1,2 +1,2 @@
 # animated-dropdown-menu
-animated dropdown menu by using only CSS and HTML
+animated dropdown menu by using CSS and HTML only.
